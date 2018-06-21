@@ -14,7 +14,7 @@ def mycodysimple(dir1,dir2):
                 util.mycody(os.path.join(dir1,i),target)
 
 # july 发布到 142 脚本
-# july1=u"D:\\publish\\LMSWeb"
-# july2=u"\\\\10.99.110.142\\d$\\LMS\\LMSJuly_21"
+july1=u"D:\\publish\\LMSWeb"
+july2=u"\\\\10.99.110.142\\d$\\LMS\\LMSJuly_21"
 
-# copy(july1,july2)
+mycodysimple(july1,july2)
