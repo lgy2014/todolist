@@ -2,8 +2,9 @@ import os
 import shutil
 import util
 
+
 def mycodysimple(dir1,dir2):
-    ignores=["AppOffLine","DownLoad","Test","UploadFile"]
+    ignores=["AppOffLine","DownLoad","Test","UploadFile","EDI","TemplateFiles","Images"]
     list=os.listdir(dir1)
     for i in list:
         if os.path.isdir(os.path.join(dir1,i)):

@@ -3,3 +3,4 @@
 # IDEs and editors
 node_modules
 dist
+__pycache__
