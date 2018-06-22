@@ -18,4 +18,11 @@ def mycodysimple(dir1,dir2):
 july1=u"D:\\publish\\LMSWeb"
 july2=u"\\\\10.99.110.142\\d$\\LMS\\LMSJuly_21"
 
-mycodysimple(july1,july2)
+# mycodysimple(july1,july2)
+
+# ignore_lms=("AppOffLine","DownLoad","Test","UploadFile","EDI","TemplateFiles","Images",".pdb","AppSettings.config","Blank.aspx","default.aspx","Error.aspx","FrameInfo.aspx","GetConfigurableId.ashx","Global.asax","HomePage.aspx","Index.aspx","log4net.config","packages.config","Web.config","注释.txt")
+ignore_lms=("bin","Scripts","Styles","TemplateFiles","AppOffLine","DownLoad","Test","UploadFile","EDI","TemplateFiles","Images",".pdb","AppSettings.config","Blank.aspx","default.aspx","Error.aspx","FrameInfo.aspx","GetConfigurableId.ashx","Global.asax","HomePage.aspx","Index.aspx","log4net.config","packages.config","Web.config","注释.txt")
+
+
+julytest=u"D:\\publish\\test"
+util.mycody(july1,julytest,ignore=ignore_lms)

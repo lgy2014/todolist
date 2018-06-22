@@ -1,9 +1,8 @@
 import os
 import shutil
 
-ignore=(".pdb")
 
-def mycody(dir1, dir2):
+def mycody(dir1, dir2,ignore=(".pdb")):
     if not os.path.exists(dir2):
         os.mkdir(dir2)
     list = os.listdir(dir1)
@@ -17,7 +16,8 @@ def mycody(dir1, dir2):
         else:
             dstDir = os.path.join(dir2, i)
             srcDir=os.path.join(dir1,i)
-            mycody(srcDir, dstDir)
+            mycody(srcDir, dstDir,ignore=ignore)
+
 
 def mycodpy2(src,dst):
     return False
