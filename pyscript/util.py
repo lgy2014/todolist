@@ -3,6 +3,7 @@ import shutil
 
 
 def mycody(dir1, dir2,ignore=(".pdb")):
+    # copy abc
     if not os.path.exists(dir2):
         os.mkdir(dir2)
     list = os.listdir(dir1)
