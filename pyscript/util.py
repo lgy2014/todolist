@@ -1,9 +1,8 @@
 import os
 import shutil
+import stat
 
-
-def mycody(dir1, dir2,ignore=(".pdb")):
-    # copy abc
+def mycody(dir1, dir2, ignore=(".pdb")):
     if not os.path.exists(dir2):
         os.mkdir(dir2)
     list = os.listdir(dir1)
@@ -12,13 +11,16 @@ def mycody(dir1, dir2,ignore=(".pdb")):
         if i.endswith(ignore):
             continue
         if os.path.isfile(_src):
-            shutil.copy(_src, dir2)
-            print(os.path.join(dir2,i))
+            try:
+                shutil.copy(_src, dir2)
+                print(os.path.join(dir2, i))
+            except PermissionError as err:
+                print(err)
+                # os.remove(os.path.join(dir2,i))
+                os.chmod(os.path.join(dir2,i), stat.S_IWRITE)
+                shutil.copy(_src, dir2)
+                print(os.path.join(dir2, i))
         else:
             dstDir = os.path.join(dir2, i)
-            srcDir=os.path.join(dir1,i)
-            mycody(srcDir, dstDir,ignore=ignore)
-
-
-def mycodpy2(src,dst):
-    return False
+            srcDir = os.path.join(dir1, i)
+            mycody(srcDir, dstDir, ignore=ignore)

@@ -2,17 +2,14 @@ import os
 import shutil
 import util
 
-def mycodysimple(dir1,dir2):
-    ignores=["css"]
-    list=os.listdir(dir1)
-    for i in list:
-        if os.path.isdir(os.path.join(dir1,i)):
-            if i in ignores:
-                continue
-            else:
-                target=os.path.join(dir2,i)
-                util.mycody(os.path.join(dir1,i),target)
+
+# july 发布到 142 脚本
+ignore_lms=(".pdb","TemplateFiles","AppOffLine","DownLoad","Test","UploadFile","EDI","TemplateFiles","Images","AppSettings.config","Blank.aspx","default.aspx","Error.aspx","FrameInfo.aspx","GetConfigurableId.ashx","Global.asax","HomePage.aspx","Index.aspx","log4net.config","packages.config","Web.config","注释.txt")
+
+# ignore_lms = ignore_lms +("bin")
+# ignore_lms = ignore_lms +("Styles")
+# ignore_lms = ignore_lms +("Scripts")
 
 src = u"D:\\a"
 dst = u"D:\\b"
-mycodysimple(src,dst)
+util.mycody(src,dst,ignore=ignore_lms)
