@@ -10,7 +10,7 @@ import util
 
 
 # july 发布到 142 脚本
-ignore_lms=(".pdb","TemplateFiles","AppOffLine","DownLoad","Test","UploadFile","EDI","TemplateFiles","Images","AppSettings.config","Blank.aspx","default.aspx","Error.aspx","FrameInfo.aspx","GetConfigurableId.ashx","Global.asax","HomePage.aspx","Index.aspx","log4net.config","packages.config","Web.config","注释.txt")
+ignore_lms=(".pdb","TemplateFiles","AppOffLine","DownLoad","Test","UploadFile","EDI","Images","jquery1.9.1","jquery-tmpl-master","kindeditor-3.4","layui","My97DatePicker","artdialog","SwfUpload","uploadify","ymPrompt","AppSettings.config","Blank.aspx","default.aspx","Error.aspx","FrameInfo.aspx","GetConfigurableId.ashx","Global.asax","HomePage.aspx","Index.aspx","log4net.config","packages.config","Web.config","注释.txt")
 
 # ignore_lms = ignore_lms +("bin")
 # ignore_lms = ignore_lms +("Styles")
