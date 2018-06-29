@@ -5,8 +5,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
   // entry: './src/index.js',
   entry:{
-    app:'./src/index.js',
+    app:'./src/index.ts',
     print:'./src/print.js'
+  },
+  devtool: 'inline-source-map',
+  resolve:{
+extensions:['.tsx','ts','js']
   },
   plugins:[
     new CleanWebpackPlugin(['dist']),
@@ -19,8 +23,21 @@ module.exports = {
     filename:'[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+  externals:{
+    loadsh:{
+      commonjs:'lodash',
+      commonjs2:'lodash',
+      amd:'lodash',
+      root:'_'
+    }
+  },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use:'ts-loader',
+        exclude:/node_modules/
+      },
       {
         test: /\.css$/,
         use: [
