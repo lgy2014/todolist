@@ -14,8 +14,8 @@ for i in ignore_lms:
         ignore.append(i)
 
 for i in range(len(rootIgnore)):
-    if rootIgnore[i].startswith('*'):
-        rootIgnore[i]='.'+rootIgnore[i]
+    if rootIgnore[i].startswith('*.'):
+        rootIgnore[i]='.*\.'+rootIgnore[i]
 
 for i in rootIgnore:
     print(i)
@@ -28,8 +28,5 @@ def mymatch(str):
         else:
             return False
 
-# match file
-path="D:\\publish\\LMSWeb"
-dirs = os.listdir(path)
-for d in dirs:
+
     
