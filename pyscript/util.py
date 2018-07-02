@@ -68,12 +68,12 @@ def _copyfile(dir1, dir2, i, isRootDir=False):
 
     if os.path.isfile(_src):
         try:
-            # shutil.copy(_src, dir2)
+            shutil.copy(_src, dir2)
             print(os.path.join(dir2, i))
         except PermissionError as err:
             print(err)
             os.chmod(os.path.join(dir2, i), stat.S_IWRITE)
-            # shutil.copy(_src, dir2)
+            shutil.copy(_src, dir2)
             print(os.path.join(dir2, i))
     elif os.path.isdir(_src):
         dstDir = os.path.join(dir2, i)

@@ -7,5 +7,8 @@ ignore=['/AppOffLine','/*.config','/*.aspx','/*.ashx','/*.asax','/*.txt','/Style
 # ignore=['*.pdb','/test','/AppOffLine','/*.config','/*.aspx','/*.ashx','/*.asax','/*.txt']
 
 path="D:\\publish\\LMSWeb"
-path2="D:\\publish\\test"
+path2="\\\\10.99.110.142\\d$\\LMS\\LMSJuly_21"
+
+# path2="D:\\publish\\test"
+
 util.mycody2(path,path2,ignore)
