@@ -35,14 +35,8 @@ regularList = []
 
 
 def IgnoreToRegular(_str):
-    if _str.startswith('*.'):
-        _str = '.*.'+_str.lstrip('*.')
-    elif _str.startswith('.'):
-        _str = '.*.'+_str.lstrip('.')
-    elif '*.' in _str:
-        _str = _str.replace('*.', '.*.')
-    elif '*' in _str:
-        _str = _str.replace('*', '.*')
+    _str=_str.replace('.','\\.')
+    _str=_str.replace('*','.*')
     return _str.lower()
 
 

@@ -4,7 +4,7 @@ import util
 path="D:\\publish\\LMSWeb"
 path2="D:\\publish\\test"
 
-util.mycody2(path,path2,['.pdb','.aspx','.ascx','.js','.dll','.css','.txt','.png','.wsdl','.datasource','.jpg','.gif','.ashx','.html','Test','Temp*','jquery*','layu*','*tation*','test','Contrac*','bootstrap*'])
+util.mycody2(path,path2,['.pdb','.aspx','.ascx','.js','.dll','.css','.txt','.png','.wsdl','.datasource','.jpg','.gif','.ashx','.html','Test','Temp*','jquery*','layu*','*tation*','test','Contrac*','bootstrap*','ContractModel'])
 # util.mycody2(path,path2,['.aspx'])
 
 
