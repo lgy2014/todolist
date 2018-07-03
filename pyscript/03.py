@@ -8,6 +8,8 @@ util.mycody2(path,path2,['.pdb','.aspx','.ascx','.js','.dll','.css','.txt','.png
 # util.mycody2(path,path2,['.aspx'])
 
 
+# util.rootRegularList
+
 # import re
 
 # _str="1.asPx"
@@ -15,4 +17,3 @@ util.mycody2(path,path2,['.pdb','.aspx','.ascx','.js','.dll','.css','.txt','.png
 # print(ret)
 # if ret:
 #     print(_str)
-
