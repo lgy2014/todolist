@@ -1,20 +1,22 @@
 <template>
 <div>
-    正在进行
+  <br />
+    <h2>正在进行</h2>
 <ul>
     <li 
     v-for="(todo,index) in todos"
     v-if="!todo.isCompleted" 
     :index="index"
-><Checkbox v-model="todo.isCompleted">{{todo.text}}</Checkbox><Button type="ghost" size="small" @click.native="todos.splice(index,1)" shape="circle" icon="android-remove"></Button></li>
+><Checkbox v-model="todo.isCompleted" size="large">{{todo.text}}</Checkbox><Button type="ghost" size="small" @click.native="todos.splice(index,1)" shape="circle" icon="android-remove"></Button></li>
 </ul>
-已完成
+<br />
+    <h2>已完成</h2>
 <ul>
     <li 
     v-for="(todo,index) in todos"
     v-if="todo.isCompleted" 
     :index="index"
-><Checkbox v-model="todo.isCompleted">{{todo.text}}</Checkbox><Button type="ghost" size="small" @click.native="todos.splice(index,1)" shape="circle" icon="android-remove"></Button></li>
+><Checkbox v-model="todo.isCompleted" size="large">{{todo.text}}</Checkbox><Button type="ghost" size="small" @click.native="todos.splice(index,1)" shape="circle" icon="android-remove"></Button></li>
 </ul>
 </div>
 </template>
@@ -31,5 +33,11 @@ export default {
 <style>
 ul {
   list-style: none;
+}
+
+label{
+  width:90%;
+  border:1px solid #dddee1;
+  font-size: 18px;
 }
 </style>

@@ -43,7 +43,7 @@ export default [
     ]
   },
   {
-    path: "normal",
+    path: "/normal",
     name: "normal",
     meta: {
       icon: 'ios-list-outline',
