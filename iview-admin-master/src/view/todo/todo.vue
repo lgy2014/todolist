@@ -19,7 +19,6 @@ export default {
   data() {
     return {
       value: "",
-      index:0,
       todos: Store.fetch()
     };
   },
@@ -36,7 +35,7 @@ export default {
   },
   methods: {
     addItem: function(event) {
-      var item = { id:this.index++,text: this.value,isCompleted:false };
+      var item = {text: this.value,isCompleted:false };
       this.todos.unshift(item);
       this.value = "";
     },

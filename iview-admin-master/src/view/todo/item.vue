@@ -5,7 +5,6 @@
     <li 
     v-for="(todo,index) in todos"
     v-if="!todo.isCompleted" 
-    v-bind:key="todo.id"
     :index="index"
 ><Checkbox v-model="todo.isCompleted">{{todo.text}}</Checkbox><Button type="ghost" size="small" @click.native="todos.splice(index,1)" shape="circle" icon="android-remove"></Button></li>
 </ul>
@@ -14,7 +13,6 @@
     <li 
     v-for="(todo,index) in todos"
     v-if="todo.isCompleted" 
-    v-bind:key="todo.id"
     :index="index"
 ><Checkbox v-model="todo.isCompleted">{{todo.text}}</Checkbox><Button type="ghost" size="small" @click.native="todos.splice(index,1)" shape="circle" icon="android-remove"></Button></li>
 </ul>
