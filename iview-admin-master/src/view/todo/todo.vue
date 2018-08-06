@@ -48,7 +48,7 @@ export default {
       this.value = "";
     },
     clearAll: function() {
-      this.todos.splice(0, this.index);
+      this.todos.splice(0, this.todos.length);
     }
   }
 };
