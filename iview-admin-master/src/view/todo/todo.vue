@@ -39,6 +39,10 @@ export default {
   },
   methods: {
     addItem: function(event) {
+      if (this.value === "") {
+        alert("内容不能为空");
+        return;
+      }
       var item = { text: this.value, isCompleted: false };
       this.todos.unshift(item);
       this.value = "";
