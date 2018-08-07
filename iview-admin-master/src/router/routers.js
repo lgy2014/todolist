@@ -13,7 +13,7 @@ import parentView from "@/components/parent-view";
 
 export default [
   {
-    path: "/login",
+    path: "/admin/login",
     name: "login",
     meta: {
       title: "Login - 登录",
@@ -22,9 +22,9 @@ export default [
     component: () => import("@/view/login/login.vue")
   },
   {
-    path: "/",
+    path: "/admin/index.html",
     name: "home",
-    redirect: "/home",
+    redirect: "/admin/home",
     component: Main,
     meta: {
       hideInMenu: true,
@@ -32,7 +32,7 @@ export default [
     },
     children: [
       {
-        path: "home",
+        path: "/admin/home",
         name: "home",
         meta: {
           hideInMenu: true,
@@ -43,7 +43,7 @@ export default [
     ]
   },
   {
-    path: "/normal",
+    path: "/admin/normal",
     name: "normal",
     meta: {
       icon: 'ios-list-outline',
@@ -52,7 +52,7 @@ export default [
     component: Main,
     children: [
       {
-        path: "/todo",
+        path: "/admin/todo",
         name: "todo",
         meta: {
           icon: 'ios-list-outline',
@@ -72,7 +72,7 @@ export default [
     }
   },
   {
-    path: "/join",
+    path: "/admin/join",
     name: "join",
     component: Main,
     children: [
@@ -88,7 +88,7 @@ export default [
     ]
   },
   {
-    path: "/components",
+    path: "/admin/components",
     name: "components",
     meta: {
       icon: "social-buffer",
@@ -153,7 +153,7 @@ export default [
     ]
   },
   {
-    path: "/update",
+    path: "/admin/update",
     name: "update",
     meta: {
       icon: "upload",
@@ -182,7 +182,7 @@ export default [
     ]
   },
   {
-    path: "/directive",
+    path: "/admin/directive",
     name: "directive",
     meta: {
       hide: true
@@ -201,7 +201,7 @@ export default [
     ]
   },
   {
-    path: "/multilevel",
+    path: "/admin/multilevel",
     name: "multilevel",
     meta: {
       icon: "arrow-graph-up-right",
@@ -252,7 +252,7 @@ export default [
     ]
   },
   {
-    path: "/401",
+    path: "/admin/401",
     name: "error_401",
     meta: {
       hideInMenu: true
@@ -260,7 +260,7 @@ export default [
     component: () => import("@/view/error-page/401.vue")
   },
   {
-    path: "/500",
+    path: "/admin/500",
     name: "error_500",
     meta: {
       hideInMenu: true
