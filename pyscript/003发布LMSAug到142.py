@@ -1,6 +1,24 @@
 ﻿import util
 import time
 
+def FormatTime(second):
+    desc=''
+
+    hour = second // 3600
+    second= second % 3600
+
+    minute = second // 60
+    second = second % 60
+
+    if  second>0:
+        desc ='%d 秒'%(second)
+    if  minute >0:
+        desc='%d 分钟 '%(minute)+desc
+    if  hour>0:
+        desc= '%d 小时 '%(hour)+desc
+
+    return desc
+
 start_time = time.time()
 # 过滤掉常规文件，加快发布速度
 ignore = ['/AppOffLine', '/*.config', '/*.aspx', '/*.ashx', '/*.asax', '/*.txt', '/Styles', '/DownLoad', '/Test', '*.zip', '*.rar', '*.pdb', 'temp*', 'images', 'bootstrap*', 'jquery*', 'artdialog*', 'echarts*', 'kindeditor*', 'layui', 'my97datepic*', 'swfupload*', 'ymprompt*', 'uploadfile*', 'npoi*', 'lenovo*.dll', 'DC.Web.HttpCompress.dll',
@@ -19,5 +37,5 @@ util.mycody2(path, path2, ignore)
 end_time = time.time()
 
 timelen = end_time-start_time
-timelen = round(timelen/60, 2)
-print('执行时长：', timelen,'分钟')
+timelen = FormatTime(timelen)
+print('执行时长：', timelen)
