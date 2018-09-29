@@ -3,6 +3,23 @@ import shutil
 import stat
 import re
 
+def FormatTime(second):
+    desc=''
+
+    hour = second // 3600
+    second= second % 3600
+
+    minute = second // 60
+    second = second % 60
+
+    if  second>0:
+        desc ='%d 秒'%(second)
+    if  minute >0:
+        desc='%d 分钟 '%(minute)+desc
+    if  hour>0:
+        desc= '%d 小时 '%(hour)+desc
+
+    return desc
 
 def mycody(dir1, dir2, ignore=(".pdb")):
     if not os.path.exists(dir2):
